@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: 2da12cfa24ea22f44b63ae9b2aaa7332
+timeCreated: 1456438829
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Cube_001
+    100002: Cube_002
+    100004: Cylinder_002
+    100006: Cylinder_003
+    100008: Engine_Vent
+    100010: Engine_Vent_001
+    100012: Engine_Vent_004
+    100014: Engine_Vent_005
+    100016: Helicopter_Body
+    100018: //RootNode
+    100020: LandingGear
+    100022: LandingGear_001
+    100024: LandingGear_002
+    100026: LandingGear_Door
+    100028: LandingGear_Door_001
+    100030: LandingGear_Door_002
+    100032: Prop_Main
+    100034: Prop_Rotation
+    400000: Cube_001
+    400002: Cube_002
+    400004: Cylinder_002
+    400006: Cylinder_003
+    400008: Engine_Vent
+    400010: Engine_Vent_001
+    400012: Engine_Vent_004
+    400014: Engine_Vent_005
+    400016: Helicopter_Body
+    400018: //RootNode
+    400020: LandingGear
+    400022: LandingGear_001
+    400024: LandingGear_002
+    400026: LandingGear_Door
+    400028: LandingGear_Door_001
+    400030: LandingGear_Door_002
+    400032: Prop_Main
+    400034: Prop_Rotation
+    2300000: Cube_001
+    2300002: Cube_002
+    2300004: Cylinder_002
+    2300006: Cylinder_003
+    2300008: Engine_Vent
+    2300010: Engine_Vent_001
+    2300012: Engine_Vent_004
+    2300014: Engine_Vent_005
+    2300016: Helicopter_Body
+    2300018: LandingGear
+    2300020: LandingGear_001
+    2300022: LandingGear_002
+    2300024: LandingGear_Door
+    2300026: LandingGear_Door_001
+    2300028: LandingGear_Door_002
+    2300030: Prop_Main
+    2300032: Prop_Rotation
+    3300000: Cube_001
+    3300002: Cube_002
+    3300004: Cylinder_002
+    3300006: Cylinder_003
+    3300008: Engine_Vent
+    3300010: Engine_Vent_001
+    3300012: Engine_Vent_004
+    3300014: Engine_Vent_005
+    3300016: Helicopter_Body
+    3300018: LandingGear
+    3300020: LandingGear_001
+    3300022: LandingGear_002
+    3300024: LandingGear_Door
+    3300026: LandingGear_Door_001
+    3300028: LandingGear_Door_002
+    3300030: Prop_Main
+    3300032: Prop_Rotation
+    4300000: Cylinder_003
+    4300002: Cube_002
+    4300004: Cylinder_002
+    4300006: Cube_001
+    4300008: Helicopter_Body
+    4300010: Engine_Vent
+    4300012: Prop_Rotation
+    4300014: Prop_Main
+    4300016: LandingGear_Door_002
+    4300018: LandingGear
+    4300020: LandingGear_Door_001
+    4300022: LandingGear_002
+    4300024: LandingGear_Door
+    4300026: LandingGear_001
+    4300028: Engine_Vent_001
+    4300030: Engine_Vent_004
+    4300032: Engine_Vent_005
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
