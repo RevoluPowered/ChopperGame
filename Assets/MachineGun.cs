@@ -47,4 +47,44 @@ public class MachineGun : MonoBehaviour {
         }
 	}
 
+
+    /// <summary>
+    /// This lets you calculate the yaw or pitch of the player, this is mainly used when pitching normally, or when yawing inside a vehicle.
+    /// </summary>
+    /// <returns>The in limits.</returns>
+    /// <param name="rotation">Rotation.</param>
+    /// <param name="current">Current.</param>
+    /// <param name="movement">Movement.</param>
+    /// <param name="useX">If set to <c>true</c> use x.</param>
+    /// <param name="min">Minimum.</param>
+    /// <param name="max">Max.</param>
+    Quaternion CalculateInLimits(Quaternion rotation, ref float current, float movement, bool useX = true, float min = -70, float max = 60)
+    {
+        // Current movement clamped to the min max, to stop people hitting max movement in a single tick.
+        movement = Mathf.Clamp(movement, min, max);
+        current += movement;
+
+        // Amount to ad
+        float unclamped = current;
+        current = Mathf.Clamp(current, min, max);
+
+        // Calculate reduction rate.
+        float reductionRate = (unclamped - current);
+
+        Quaternion EulerRot = Quaternion.identity;
+
+        if (useX)
+        {
+            EulerRot = Quaternion.Euler(movement - reductionRate, 0, 0);
+        }
+        else
+        {
+            EulerRot = Quaternion.Euler(0, movement - reductionRate, 0);
+        }
+
+        // Rotate the camera on the pitch axis, relative to the players head rotation.
+        return Quaternion.Slerp(rotation, rotation * EulerRot, Time.time);
+    }
+
+
 }

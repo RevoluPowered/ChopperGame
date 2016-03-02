@@ -7,17 +7,17 @@ public class helicontrol : MonoBehaviour {
 	void Start () {
         mRigidbody = GetComponent<Rigidbody>();
 	}
-	
+    float mThrottle = 1.0f;
 	// Update is called once per frame
 	void Update () {
         float vert = Input.GetAxis("Vertical") * 20.0f;
-        float horiz = Input.GetAxis("Horizontal") * 20.0f;
-        float yaw = Input.GetAxis("YawAxis") * 10.0f;
-        float throttle = Mathf.Clamp(Input.GetAxis("Throttle"), 0.5f, 0.9f);
+        float horiz = Input.GetAxis("Horizontal") * 40.0f;
+        float yaw = Input.GetAxis("YawAxis") * 40.0f;
+        mThrottle = Mathf.Clamp((Input.GetAxis("Throttle")*1.5f) + 1.0f, 0.0f, 2.0f);
         transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(-horiz, 0, 0) * Quaternion.Euler(0,-yaw, 0) * Quaternion.Euler(0,0,-vert), Time.deltaTime);
-        Debug.Log("Throttle: " + throttle);
+        //Debug.Log("Throttle: " + mThrottle);
         // Add force relative to the orientation to emulate gravity offset, this should be relatively stable flight.
-        mRigidbody.AddForce((transform.rotation * Vector3.up) * (mRigidbody.mass * Physics.gravity.magnitude) * throttle );
+        
 
         if(transform.position.y <= 24.0f)
         {
@@ -30,8 +30,22 @@ public class helicontrol : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// This helps stablize the flight of the objects.
+    /// </summary>
+    public float mMaxVelocity = 100.0f;
+
     void FixedUpdate()
     {
-
+        mRigidbody.AddForce((transform.up * mThrottle) * mRigidbody.mass * Physics.gravity.magnitude);
+        
+        // Stabilize velocity
+        if( mRigidbody.velocity.magnitude > mMaxVelocity)
+        {
+            mRigidbody.velocity = mRigidbody.velocity - (mRigidbody.velocity * Time.deltaTime);
+            Debug.Log("Clamping velocity");
+            
+        }
     }
+    
 }

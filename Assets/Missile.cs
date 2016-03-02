@@ -4,8 +4,7 @@ using System.Collections;
 
 public class Missile : MonoBehaviour {
 
-    public AudioSource mMissileLaunchSound;
-    
+    public AudioSource mMissileLaunchSound;  
 
    
 
@@ -28,7 +27,6 @@ public class Missile : MonoBehaviour {
     /// </summary>
     public GameObject mMissileExplosionPrefab;
 
-
 	// Use this for initialization
 	void Start () {
         mRigidbody = GetComponent<Rigidbody>();
@@ -37,7 +35,7 @@ public class Missile : MonoBehaviour {
         mParticles.SetActive(false);
 	}
 
-    void SetMissileTarget( GameObject target )
+    public void SetMissileTarget( GameObject target )
     {
         mCurrentTarget = target;
         
@@ -60,8 +58,14 @@ public class Missile : MonoBehaviour {
             Debug.Log("Final position: " + finalPosition);
         }
 
-
-        return finalPosition;
+        if (mMissTarget)
+        {
+            return finalPosition + (Vector3.down * 10.0f);
+        }
+        else
+        {
+            return finalPosition;
+        }
     }
 
     public static Vector3 CalculateInterceptCourse(Vector3 aTargetPos, Vector3 aTargetSpeed, Vector3 aInterceptorPos, float aInterceptorSpeed)
@@ -92,8 +96,13 @@ public class Missile : MonoBehaviour {
             return (S1) * targetDir + aTargetSpeed;
     }
 
+    public Rigidbody GetRigidbody()
+    {
+        return mRigidbody;
+    }
+
     private float mTimeoutCounter = 0.0f;
-    public float mTimeoutDetonation = 2.0f;
+    public float mTimeoutDetonation = 8.0f;
     void Update() {
         if (mDebugLauncher)
         {
@@ -116,11 +125,11 @@ public class Missile : MonoBehaviour {
             if (dist < mClosestDistance)
             {
                 mClosestDistance = dist;
-                Debug.Log("Closest so far: " + dist);
+                //Debug.Log("Closest so far: " + dist);
             }
             if (dist < 85.0f)
             {
-                Debug.Log("In range!");
+                //Debug.Log("In range!");
                 Detonate();
             }
 
@@ -149,12 +158,17 @@ public class Missile : MonoBehaviour {
     /// <summary>
     /// Launch the missile
     /// </summary>
-    void Launch()
+    public void Launch( bool miss = false )
     {
         mMissileLaunchSound.Play();
         mObjectAttacking = true;
         mParticles.SetActive(true);
+
+        // Are we going to miss on purpose?
+        mMissTarget = miss;
     }
+
+    public bool mMissTarget = false;
 
     void Detonate()
     {
