@@ -1,23 +1,56 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+
 
 public class helicontrol : MonoBehaviour {
     Rigidbody mRigidbody;
+
+    /// <summary>
+    /// The slider on the UI for the throttle.
+    /// </summary>
+    public Slider mThrottleSlider;
+
 	// Use this for initialization
 	void Start () {
         mRigidbody = GetComponent<Rigidbody>();
 	}
     float mThrottle = 1.0f;
-	// Update is called once per frame
+
+    /// <summary>
+    /// Acceleration / Control middling.
+    /// </summary>
+    float accumulatedPanningX;
+    float accumulatedPanningY;
+
+	/// <summary>
+    /// Update / Unity Callback.
+    /// </summary>
 	void Update () {
-        float vert = Input.GetAxis("Vertical") * 20.0f;
+
+        // Pitch accumulator and axis handling from inputs.
+        float vert = Input.GetAxis("Mouse Y");
+        accumulatedPanningY += vert; // Append val on axis.        
+
+        // Yaw accumulator and axis handling from inputs.
+        float yaw = -Input.GetAxis("Mouse X");
+        accumulatedPanningX += yaw;
+
+        // Roll handling
         float horiz = Input.GetAxis("Horizontal") * 40.0f;
-        float yaw = Input.GetAxis("YawAxis") * 40.0f;
-        mThrottle = Mathf.Clamp((Input.GetAxis("Throttle")*1.5f) + 1.0f, 0.0f, 2.0f);
-        transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(-horiz, 0, 0) * Quaternion.Euler(0,-yaw, 0) * Quaternion.Euler(0,0,-vert), Time.deltaTime);
-        //Debug.Log("Throttle: " + mThrottle);
-        // Add force relative to the orientation to emulate gravity offset, this should be relatively stable flight.
+
+        // Throttle
+        float throttle = Input.GetAxis("Throttle");
+        Debug.Log("Vert: " + vert);
+       
+        // Throttle clamp
+        mThrottle = Mathf.Clamp((throttle * 1.5f) + 1.0f, 0.0f, 2.0f);
         
+        // Transform rotation
+        transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(accumulatedPanningX, 0, 0) * Quaternion.Euler(0,horiz, 0) * Quaternion.Euler(0,0,accumulatedPanningY), Time.deltaTime);
+        
+        // Add force relative to the orientation to emulate gravity offset, this should be relatively stable flight.
+        mThrottleSlider.value = throttle;
 
         if(transform.position.y <= 24.0f)
         {
@@ -35,6 +68,9 @@ public class helicontrol : MonoBehaviour {
     /// </summary>
     public float mMaxVelocity = 100.0f;
 
+    /// <summary>
+    /// Fixed update / Unity Callback.
+    /// </summary>
     void FixedUpdate()
     {
         mRigidbody.AddForce((transform.up * mThrottle) * mRigidbody.mass * Physics.gravity.magnitude);
