@@ -55,7 +55,7 @@ public class Missile : MonoBehaviour {
             finalPosition = CalculateInterceptCourse(mTargetTransform.position, mTargetRigidbody.velocity, transform.position, 60.0f);
             finalisedPositon = true;
             
-            Debug.Log("Final position: " + finalPosition);
+            Console.Log("Final position: " + finalPosition);
         }
 
         if (mMissTarget)
@@ -125,11 +125,11 @@ public class Missile : MonoBehaviour {
             if (dist < mClosestDistance)
             {
                 mClosestDistance = dist;
-                //Debug.Log("Closest so far: " + dist);
+                //Console.Log("Closest so far: " + dist);
             }
             if (dist < 85.0f)
             {
-                //Debug.Log("In range!");
+                //Console.Log("In range!");
                 Detonate();
             }
 

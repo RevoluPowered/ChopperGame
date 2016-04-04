@@ -56,7 +56,7 @@ public class HeliControl : MonoBehaviour {
 
         // Throttle
         float throttle = Input.GetAxis("Throttle");
-        Debug.Log("Vert: " + vert);
+       // Console.Log("Vert: " + vert);
        
         // Throttle clamp
         mThrottle = Mathf.Clamp((throttle * 1.5f) + 1.0f, 0.0f, 2.0f);
@@ -98,7 +98,7 @@ public class HeliControl : MonoBehaviour {
         if( mRigidbody.velocity.magnitude > mMaxVelocity)
         {
             mRigidbody.velocity = mRigidbody.velocity - (mRigidbody.velocity * Time.deltaTime);
-            Debug.Log("Clamping velocity");
+            Console.Log("Clamping velocity");
             
         }
     }

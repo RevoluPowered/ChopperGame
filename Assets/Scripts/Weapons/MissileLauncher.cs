@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(DamageBase))]
 public class MissileLauncher : MonoBehaviour {
 
     /// <summary>
@@ -38,12 +39,20 @@ public class MissileLauncher : MonoBehaviour {
     /// </summary>
     public int mChanceOfHitToOne = 3;
 
+    /// <summary>
+    /// The damage base which is attached to the game object.
+    /// </summary>
+    private DamageBase mDamageBase;
+
     // Use this for initialization
     void Start () {
+        // Get local damage base.
+        mDamageBase = GetComponent<DamageBase>();
+
 	    if(mMissilePrefab == null)
         {
-            Debug.Log("[Launcher] Missile prefab not set, destroying launcher.");
-            Debug.LogError("Error launcher not assigned prefab.");
+            Console.Log("[Launcher] Missile prefab not set, destroying launcher.");
+            Console.LogError("Error launcher not assigned prefab.");
 
             Destroy(this);
         }
@@ -61,7 +70,7 @@ public class MissileLauncher : MonoBehaviour {
         {
             if(mMissilesStored == 0)
             {
-                Debug.Log("[Launcher] Missiles spent from launcher.");
+                Console.Log("[Launcher] Missiles spent from launcher.");
                 Destroy(this);
             }
 
@@ -69,7 +78,7 @@ public class MissileLauncher : MonoBehaviour {
             mReloadCounter += Time.deltaTime;
             if(mReloadCounter >= mReloadTime)
             {
-                Debug.Log("[Launcher] Reloading completed!");
+                Console.Log("[Launcher] Reloading completed!");
                 mReloadCounter = 0.0f;
                 mMissilesLoaded = 1;
                 mMissilesStored -= 1;
@@ -87,7 +96,7 @@ public class MissileLauncher : MonoBehaviour {
             {
                 if (Vector3.Distance(transform.position, ply.transform.position) <= mTargetRadius)
                 {
-                    Debug.Log("[Launcher] Firing, target found!");
+                    Console.Log("[Launcher] Firing, target found!");
                     // We have a valid target spawn missile.
                     FireMissile(ply);
                     if (!mEnemyDetected.isPlaying)

@@ -8,24 +8,24 @@ public class DeathHit : MonoBehaviour {
     void OnParticleCollision( GameObject other )
     {
         ++hitCount;
-        Debug.Log(" particle hit event");
+        Console.Log(" particle hit event");
         if (hitCount > maxHits)
         {
             //explosion effect
             Destroy(transform.root.gameObject);
-            Debug.Log(" particle Death event");
+            Console.Log(" particle Death event");
         }
     }
 
     void OnCollisionEnter( Collision col )
     {
         ++hitCount;
-        Debug.Log("hit event");
+        Console.Log("hit event");
         if (hitCount > maxHits)
         {
             //explosion effect
             Destroy(transform.root.gameObject);
-            Debug.Log("Death event");
+            Console.Log("Death event");
         }
     }
 	// Use this for initialization
