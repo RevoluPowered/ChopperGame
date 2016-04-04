@@ -185,11 +185,12 @@ GameObject:
   - 54: {fileID: 5415200}
   - 82: {fileID: 8285968}
   - 82: {fileID: 8213144}
-  - 114: {fileID: 11458126}
   - 82: {fileID: 8216030}
   - 114: {fileID: 11406218}
   - 114: {fileID: 11424640}
   - 114: {fileID: 11483076}
+  - 114: {fileID: 11457980}
+  - 114: {fileID: 11465400}
   m_Layer: 8
   m_Name: Chopper
   m_TagString: Player
@@ -1917,6 +1918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mThrottleSlider: {fileID: 0}
+  mControlMultiplier: {x: 2.5, y: 2.5, z: 2.5}
   mMaxVelocity: 100
 --- !u!114 &11424640
 MonoBehaviour:
@@ -1929,7 +1931,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65c8adf9ea5a1344a2687bd2a0c0d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mHitDamage: 15
+  mHitDamage: 10
+  mDamageMultiplier: 10
+  mAllowParticleCollisionDamage: 0
 --- !u!114 &11426138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1958,19 +1962,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RotationAxis: {x: 0, y: 0, z: 1000}
   speed: 0
---- !u!114 &11458126
+--- !u!114 &11457980
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 151926}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed341c2c46ea405408f0d75cd25548cd, type: 3}
+  m_Script: {fileID: 11500000, guid: b2005383f2474804ca4ab9943fec6b28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mExplosion: {fileID: 8216030}
-  mRotor: {fileID: 11465710}
+  mAltimeter: {fileID: 0}
+  mSpeed: {fileID: 0}
+  mHDG: {fileID: 0}
 --- !u!114 &11460900
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1990,6 +1995,18 @@ MonoBehaviour:
   mMissilesLoaded: 1
   mChanceOfHitToOne: 3
   mTargetTag: target
+--- !u!114 &11465400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f42486e4ce32b9540a293e8c9b8bcdd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mHealthHUD: {fileID: 0}
 --- !u!114 &11465710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2014,10 +2031,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57bc8dea5de107243b4a1033d242f4d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mAlive: 0
-  mHealth: 0
-  mStartingHealth: 0
-  mMaximumHealth: 0
+  mAlive: 1
+  mHealth: 100
+  mStartingHealth: 100
+  mMaximumHealth: 100
 --- !u!114 &11486850
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2099,7 +2116,7 @@ ParticleSystem:
   looping: 1
   prewarm: 0
   playOnAwake: 0
-  moveWithTransform: 1
+  moveWithTransform: 0
   scalingMode: 1
   InitialModule:
     serializedVersion: 2
@@ -2266,7 +2283,7 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4284740863
+        rgba: 4278255613
       minMaxState: 0
     startSize:
       scalar: 0.5
