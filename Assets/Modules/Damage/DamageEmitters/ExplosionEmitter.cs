@@ -65,7 +65,7 @@ public class Explosion : MonoBehaviour {
 				++mObjectDamagedCount;
 			}
 			
-			Debug.Log ("Completed damage cycle with a total damage of: " + (mDamageAmount * mObjectDamagedCount));
+			Console.Log ("Completed damage cycle with a total damage of: " + (mDamageAmount * mObjectDamagedCount));
 		}
 	}
 }
