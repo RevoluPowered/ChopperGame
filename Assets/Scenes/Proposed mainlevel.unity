@@ -86,23 +86,52 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &34268901 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 168432, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
-  m_PrefabInternal: {fileID: 385816090}
---- !u!114 &34268912
-MonoBehaviour:
+--- !u!1001 &75958205
+Prefab:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 34268901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 646151bc74dd6274d87be202cfa1380b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mExplosionEffect: {fileID: 165276, guid: 2a68f9bdf53c380468aea8ede6c46fe6, type: 2}
-  mDestroyObject: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2372.3848
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 718.33887
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3677.693
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 168432, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_Name
+      value: AntiAirSite (11)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &226323944
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +226,7 @@ RectTransform:
   - {fileID: 1593243840}
   - {fileID: 2126288558}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 15
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -422,15 +451,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 168432, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
       propertyPath: m_Name
       value: AntiAirSite (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8218944, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
@@ -469,6 +494,52 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &431012888
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3759.2866
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 642.04407
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3911.5825
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 168432, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_Name
+      value: AntiAirSite (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &456615140
 Prefab:
   m_ObjectHideFlags: 0
@@ -1257,6 +1328,52 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 883456255}
+--- !u!1001 &899322229
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4198.3174
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 702.69604
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 4334.5273
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 168432, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_Name
+      value: AntiAirSite (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &934434511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,6 +1493,144 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 934434511}
+--- !u!1001 &949274175
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2974.2646
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 706.63367
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3698.648
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 168432, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_Name
+      value: AntiAirSite (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &966828537
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3787.7495
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 629.4282
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3878.6304
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 168432, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_Name
+      value: AntiAirSite (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1092620314
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4173.605
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 698.4879
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 4329.731
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 168432, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_Name
+      value: AntiAirSite (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1164442568
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,7 +1740,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
@@ -1631,6 +1886,52 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 387904d8bdb53f44883aac57f429975a, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1481671359
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3747.0312
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 641.74603
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3875.6636
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 168432, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_Name
+      value: AntiAirSite (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1508651789
 GameObject:
@@ -1970,6 +2271,52 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1654809481}
+--- !u!1001 &1678632315
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3017.7104
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 725.4706
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3724.544
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 168432, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_Name
+      value: AntiAirSite (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1845649599
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,6 +2388,98 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1845649599}
+--- !u!1001 &1845879965
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4176.806
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 716.20856
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 4358.4277
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 168432, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_Name
+      value: AntiAirSite (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1921026132
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2414.0474
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 693.27106
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3637.7207
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 168432, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_Name
+      value: AntiAirSite (12)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1980450839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2069,7 +2508,53 @@ Transform:
   - {fileID: 793428629}
   - {fileID: 860478107}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 17
+--- !u!1001 &2017580567
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2980.149
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 726.6249
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3745.941
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 168432, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_Name
+      value: AntiAirSite (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2023476199
 GameObject:
   m_ObjectHideFlags: 0
@@ -2130,7 +2615,53 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 16
+--- !u!1001 &2033032514
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2426.9658
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 725.5967
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3690.2036
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 168432, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+      propertyPath: m_Name
+      value: AntiAirSite (13)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2064081321
 GameObject:
   m_ObjectHideFlags: 0

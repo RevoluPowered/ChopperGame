@@ -391,6 +391,7 @@ GameObject:
   - 54: {fileID: 5443096}
   - 114: {fileID: 11416490}
   - 114: {fileID: 11491540}
+  - 114: {fileID: 11427046}
   m_Layer: 10
   m_Name: AntiAirSite
   m_TagString: target
@@ -2033,7 +2034,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168432}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e8a082ff9f5b7614d90c737c11109ee4, type: 3}
@@ -2133,6 +2134,19 @@ MonoBehaviour:
   mHealth: 50
   mStartingHealth: 50
   mMaximumHealth: 50
+--- !u!114 &11427046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646151bc74dd6274d87be202cfa1380b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mExplosionEffect: {fileID: 165276, guid: 2a68f9bdf53c380468aea8ede6c46fe6, type: 2}
+  mDestroyObject: 1
 --- !u!114 &11442000
 MonoBehaviour:
   m_ObjectHideFlags: 1
