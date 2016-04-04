@@ -9,7 +9,7 @@ public class helicontrol : MonoBehaviour {
     /// <summary>
     /// The slider on the UI for the throttle.
     /// </summary>
-    public Slider mThrottleSlider;
+    public Scrollbar mThrottleSlider;
 
 	// Use this for initialization
 	void Start () {
@@ -50,7 +50,7 @@ public class helicontrol : MonoBehaviour {
         transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(accumulatedPanningX, 0, 0) * Quaternion.Euler(0,horiz, 0) * Quaternion.Euler(0,0,accumulatedPanningY), Time.deltaTime);
         
         // Add force relative to the orientation to emulate gravity offset, this should be relatively stable flight.
-        mThrottleSlider.value = throttle;
+        mThrottleSlider.size = (throttle +1) * 0.5f ;
 
         if(transform.position.y <= 24.0f)
         {
