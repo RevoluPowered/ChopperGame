@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 
-public class helicontrol : MonoBehaviour {
+public class HeliControl : MonoBehaviour {
     Rigidbody mRigidbody;
 
     /// <summary>
@@ -47,7 +47,7 @@ public class helicontrol : MonoBehaviour {
         mThrottle = Mathf.Clamp((throttle * 1.5f) + 1.0f, 0.0f, 2.0f);
         
         // Transform rotation
-        transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(accumulatedPanningX, 0, 0) * Quaternion.Euler(0,horiz, 0) * Quaternion.Euler(0,0,accumulatedPanningY), Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(-horiz, 0, 0) * Quaternion.Euler(0, -accumulatedPanningX, 0) * Quaternion.Euler(0,0,accumulatedPanningY), Time.deltaTime);
         
         // Add force relative to the orientation to emulate gravity offset, this should be relatively stable flight.
         mThrottleSlider.size = (throttle +1) * 0.5f ;
