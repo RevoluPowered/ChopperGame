@@ -141,9 +141,19 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: -0.3222979
       objectReference: {fileID: 0}
+    - target: {fileID: 11406218, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
+      propertyPath: mThrottleSlider
+      value: 
+      objectReference: {fileID: 473154495}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &473154495 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11491584, guid: a80e771b3f9306a4e98b139601ddbf64,
+    type: 2}
+  m_PrefabInternal: {fileID: 1398043956}
+  m_Script: {fileID: -2061169968, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &793428627
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,7 +500,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22461200, guid: a80e771b3f9306a4e98b139601ddbf64, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0.122
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22461200, guid: a80e771b3f9306a4e98b139601ddbf64, type: 2}
       propertyPath: m_AnchorMax.y
@@ -503,6 +513,18 @@ Prefab:
     - target: {fileID: 22465864, guid: a80e771b3f9306a4e98b139601ddbf64, type: 2}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 154042, guid: a80e771b3f9306a4e98b139601ddbf64, type: 2}
+      propertyPath: m_Name
+      value: Throttle
+      objectReference: {fileID: 0}
+    - target: {fileID: 133388, guid: a80e771b3f9306a4e98b139601ddbf64, type: 2}
+      propertyPath: m_Name
+      value: InformationStatus
+      objectReference: {fileID: 0}
+    - target: {fileID: 11491584, guid: a80e771b3f9306a4e98b139601ddbf64, type: 2}
+      propertyPath: m_Size
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a80e771b3f9306a4e98b139601ddbf64, type: 2}
