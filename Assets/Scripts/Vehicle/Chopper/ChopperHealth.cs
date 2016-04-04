@@ -34,6 +34,8 @@ public class ChopperHealth : MonoBehaviour {
     {
         Console.Log("Chopper died!");
         mHealthHUD.enabled = false;
+        // Your chopper has just been hit, you're dead.
+        mHeliControl.enabled = false;
     }
 
     /// <summary>
