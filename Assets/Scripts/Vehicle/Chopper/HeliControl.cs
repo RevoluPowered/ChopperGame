@@ -23,10 +23,18 @@ public class HeliControl : MonoBehaviour {
     float accumulatedPanningX;
     float accumulatedPanningY;
 
-	/// <summary>
+    /// <summary>
+    /// Pitch value used for QuaternionMath.CalculateInLimits
+    /// </summary>
+    private float pitchQ = 0.0f;
+    /// <summary>
+    /// Yaw value used for QuaternionMath.CalculateInLimits.
+    /// </summary>
+    private float yawQ = 0.0f;
+    /// <summary>
     /// Update / Unity Callback.
     /// </summary>
-	void Update () {
+    void Update () {
 
         // Pitch accumulator and axis handling from inputs.
         float vert = Input.GetAxis("Mouse Y");
@@ -37,7 +45,7 @@ public class HeliControl : MonoBehaviour {
         accumulatedPanningX += yaw;
 
         // Roll handling
-        float horiz = Input.GetAxis("Horizontal") * 40.0f;
+        float horiz = Input.GetAxis("Horizontal");
 
         // Throttle
         float throttle = Input.GetAxis("Throttle");
@@ -45,10 +53,14 @@ public class HeliControl : MonoBehaviour {
        
         // Throttle clamp
         mThrottle = Mathf.Clamp((throttle * 1.5f) + 1.0f, 0.0f, 2.0f);
-        
+
         // Transform rotation
-        transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(-horiz, 0, 0) * Quaternion.Euler(0, -accumulatedPanningX, 0) * Quaternion.Euler(0,0,accumulatedPanningY), Time.deltaTime);
-        
+        // transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * (Quaternion.Euler(-horiz, 0, 0) * Quaternion.Euler(0, -accumulatedPanningX, 0) * Quaternion.Euler(0,0,accumulatedPanningY)), Time.deltaTime);
+
+        // Pitch Angle - limited due to the way chopper's work.
+        transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(0,0, accumulatedPanningY * 5.0f), Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(accumulatedPanningX * 10.0f, 0.0f,0.0f), Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(0.0f, horiz * 10.0f, 0.0f), Time.deltaTime);
         // Add force relative to the orientation to emulate gravity offset, this should be relatively stable flight.
         mThrottleSlider.size = (throttle +1) * 0.5f ;
 
