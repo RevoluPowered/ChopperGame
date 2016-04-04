@@ -5,7 +5,6 @@ public class DamageHandler : MonoBehaviour {
     public AudioSource mExplosion;
     bool mDead = false;
     public rotortest mRotor;
-    public ConstantForce mConstantForce;
     void OnCollisionEnter(Collision col)
     {
         if (mDead) return;
@@ -13,7 +12,6 @@ public class DamageHandler : MonoBehaviour {
         mExplosion.Play();
         mRotor.speed = 0.0f;
         mDead = true;
-        Destroy(mConstantForce);
     }
 	// Use this for initialization
 	void Start () {
