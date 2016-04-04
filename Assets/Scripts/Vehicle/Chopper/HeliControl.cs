@@ -31,21 +31,28 @@ public class HeliControl : MonoBehaviour {
     /// Yaw value used for QuaternionMath.CalculateInLimits.
     /// </summary>
     private float yawQ = 0.0f;
+
+
+    /// <summary>
+    /// Format: PYR - this adjusts the sensitivity of the controls
+    /// </summary>
+    public Vector3 mControlMultiplier = new Vector3(2.5f, 2.5f, 2.5f);
+
     /// <summary>
     /// Update / Unity Callback.
     /// </summary>
     void Update () {
 
         // Pitch accumulator and axis handling from inputs.
-        float vert = Input.GetAxis("Mouse Y");
-        accumulatedPanningY += vert; // Append val on axis.        
+        float vert = Input.GetAxis("Mouse Y") * mControlMultiplier.x;
+        accumulatedPanningY += vert * Time.deltaTime;        
 
         // Yaw accumulator and axis handling from inputs.
-        float yaw = -Input.GetAxis("Mouse X");
-        accumulatedPanningX += yaw;
+        float yaw = -Input.GetAxis("Mouse X") * mControlMultiplier.y;
+        accumulatedPanningX += yaw * Time.deltaTime;
 
         // Roll handling
-        float horiz = Input.GetAxis("Horizontal");
+        float horiz = Input.GetAxis("Horizontal") * mControlMultiplier.z;
 
         // Throttle
         float throttle = Input.GetAxis("Throttle");
@@ -58,7 +65,7 @@ public class HeliControl : MonoBehaviour {
         // transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * (Quaternion.Euler(-horiz, 0, 0) * Quaternion.Euler(0, -accumulatedPanningX, 0) * Quaternion.Euler(0,0,accumulatedPanningY)), Time.deltaTime);
 
         // Pitch Angle - limited due to the way chopper's work.
-        transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(0,0, accumulatedPanningY * 5.0f), Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(0,0, accumulatedPanningY * 10.0f), Time.deltaTime);
         transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(accumulatedPanningX * 10.0f, 0.0f,0.0f), Time.deltaTime);
         transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(0.0f, horiz * 10.0f, 0.0f), Time.deltaTime);
         // Add force relative to the orientation to emulate gravity offset, this should be relatively stable flight.
