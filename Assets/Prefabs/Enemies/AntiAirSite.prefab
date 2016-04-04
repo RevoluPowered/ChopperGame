@@ -389,7 +389,8 @@ GameObject:
   - 82: {fileID: 8218944}
   - 114: {fileID: 11442000}
   - 54: {fileID: 5443096}
-  - 114: {fileID: 11451688}
+  - 114: {fileID: 11416490}
+  - 114: {fileID: 11491540}
   m_Layer: 10
   m_Name: AntiAirSite
   m_TagString: target
@@ -2117,6 +2118,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11416490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57bc8dea5de107243b4a1033d242f4d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mAlive: 1
+  mHealth: 50
+  mStartingHealth: 50
+  mMaximumHealth: 50
 --- !u!114 &11442000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2136,7 +2152,7 @@ MonoBehaviour:
   mMissilesLoaded: 0
   mChanceOfHitToOne: 3
   mTargetTag: Player
---- !u!114 &11451688
+--- !u!114 &11491540
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2144,11 +2160,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 168432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e82fa73f7f480d4895fcba33a7b7ffc, type: 3}
+  m_Script: {fileID: 11500000, guid: e65c8adf9ea5a1344a2687bd2a0c0d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitCount: 0
-  maxHits: 2
+  mHitDamage: 15
+  mDamageMultiplier: 2.5
+  mAllowParticleCollisionDamage: 1
 --- !u!114 &11496196
 MonoBehaviour:
   m_ObjectHideFlags: 1
