@@ -1997,19 +1997,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0.6962437
       objectReference: {fileID: 0}
     - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.12280908
       objectReference: {fileID: 0}
     - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.12276658
       objectReference: {fileID: 0}
     - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: -0.6964848
       objectReference: {fileID: 0}
     - target: {fileID: 453124, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
       propertyPath: m_RootOrder
