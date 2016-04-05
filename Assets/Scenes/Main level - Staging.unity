@@ -414,6 +414,22 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 295378826}
+--- !u!1 &363039412 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 126718, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
+  m_PrefabInternal: {fileID: 456615140}
+--- !u!65 &363039417
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 363039412}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.34797427, y: 10, z: 0.4841411}
+  m_Center: {x: 0, y: 0.00048828125, z: 0.054570507}
 --- !u!1001 &385816090
 Prefab:
   m_ObjectHideFlags: 0
@@ -625,7 +641,7 @@ Prefab:
       objectReference: {fileID: 1792959095}
     - target: {fileID: 8213144, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11424640, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
       propertyPath: mHitDamage
@@ -635,7 +651,32 @@ Prefab:
       propertyPath: mDamageMultiplier
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11465710, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
+      propertyPath: mRotationAxis.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493438, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
+      propertyPath: mRotationAxis.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493438, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
+      propertyPath: mRotationAxis.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493438, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
+      propertyPath: mRotationAxis.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431690, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
+      propertyPath: mRotationAxis.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426138, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
+      propertyPath: mGunBarrelRotator
+      value: 
+      objectReference: {fileID: 1132078331}
+    m_RemovedComponents:
+    - {fileID: 11431690, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &473154495
@@ -1651,6 +1692,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87ce1f7032bc6684a83149344c29a309, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1132078329 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 186014, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
+  m_PrefabInternal: {fileID: 456615140}
+--- !u!114 &1132078331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1132078329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed25f91506637214d8461e272d937882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mRotationAxis: {x: 0, y: 0, z: 1}
+  mSpeed: 4000
 --- !u!1 &1164442568
 GameObject:
   m_ObjectHideFlags: 0

@@ -404,7 +404,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22440264, guid: 387904d8bdb53f44883aac57f429975a, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.35333335
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22440264, guid: 387904d8bdb53f44883aac57f429975a, type: 2}
       propertyPath: m_AnchorMax.x
@@ -456,7 +456,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 181594, guid: 387904d8bdb53f44883aac57f429975a, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 106704, guid: 387904d8bdb53f44883aac57f429975a, type: 2}
       propertyPath: m_IsActive

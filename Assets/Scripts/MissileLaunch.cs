@@ -1,8 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Missile launch script - I believe this is no longer used.
+/// </summary>
 public class MissileLaunch : MonoBehaviour {
-
+    /// <summary>
+    /// Find the closes target within range of the missile launcher.
+    /// </summary>
+    /// <returns></returns>
     GameObject FindClosestTarget()
     {
         GameObject[] targets = GameObject.FindGameObjectsWithTag("target");

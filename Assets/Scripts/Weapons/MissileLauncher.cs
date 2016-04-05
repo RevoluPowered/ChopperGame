@@ -64,8 +64,10 @@ public class MissileLauncher : MonoBehaviour {
         
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	/// <summary>
+    /// Unity Update Callback
+    /// </summary>
+	void FixedUpdate () {
 
         if(mMissilesLoaded == 0)
         {
@@ -120,27 +122,37 @@ public class MissileLauncher : MonoBehaviour {
     public string mTargetTag = "Player";
 
    
-
+    /// <summary>
+    /// Fire the missile at the target - uses hit / miss target logic based on probability.
+    /// </summary>
+    /// <param name="target"></param>
     void FireMissile( GameObject target )
     {
+        // Have we ran out of missiles? Okay, Don't fire! 
         if (mMissilesLoaded <= 0) return;
-
+        Console.Log("[Missile] Firing sequence!");
+        // Instantiate missile for firing sequence
         GameObject missile = Instantiate<GameObject>(mMissilePrefab);
         
+        // Spawn missile at the launcher location
         missile.transform.position = transform.position;
 
+        // Retrieve the missile controller.
         Missile missilecontroller = missile.GetComponent<Missile>();
+
+        // Assign the target to the missile.
         missilecontroller.SetMissileTarget(target);
        
         // If we're shooting to hit.
         if (Random.Range(0,mChanceOfHitToOne) != 1)
         {
-            
+            Console.Log("[Missile] Chance of hit is low.");
             // Shooting to miss the target, they've beaten the odds.
             missilecontroller.Launch();
         }
         else
         {
+            Console.Log("[Missile] Chance of hit is high.");
             // Shooting to hit, provided it's in range!
             missilecontroller.Launch();
         }
@@ -148,15 +160,31 @@ public class MissileLauncher : MonoBehaviour {
         // Deduct missiles available.
         mMissilesLoaded -= 1;
 
+        // If we no longer have any missiles, get reloading our launch system.
         if(mMissilesLoaded <= 0)
         {
             BeginReloading();
         }
     }
 
+    /// <summary>
+    /// Are we currently reloading the launcher
+    /// </summary>
     bool mReloading = false;
+
+    /// <summary>
+    /// The time reload takes
+    /// </summary>
     float mReloadTime = 10.0f;
+
+    /// <summary>
+    /// The reload timer.
+    /// </summary>
     float mReloadCounter = 0.0f;
+
+    /// <summary>
+    /// Reload the launcher.
+    /// </summary>
     void BeginReloading()
     {
         // Stop playing the sound;

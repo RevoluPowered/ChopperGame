@@ -6,7 +6,7 @@ public class MachineGun : MonoBehaviour {
     public AudioSource mGunStartSound;
     public AudioSource mGunFireSound;
     public ParticleSystem mGunParticleSystem;
-    public rotortest mGunBarrelRotator;
+    public GunRotator mGunBarrelRotator;
 	// Use this for initialization
 	void Start() {
         
@@ -24,10 +24,10 @@ public class MachineGun : MonoBehaviour {
             {
                 mGunStartSound.Play();
                 mStartingFireSequence = true;
-                mGunBarrelRotator.speed = 5.0f;
+                mGunBarrelRotator.mSpeed = 5.0f;
             }
             mGunStartCounter += Time.deltaTime;
-            mGunBarrelRotator.speed = Mathf.Clamp(mGunBarrelRotator.speed + (1.0f * Time.deltaTime), 0.0f, 100.0f);
+            mGunBarrelRotator.mSpeed = Mathf.Clamp(mGunBarrelRotator.mSpeed + (1.0f * Time.deltaTime), 0.0f, 100.0f);
 
             if(mGunStartCounter > mGunStartTime && !mFiringWeapon)
             {
@@ -43,7 +43,7 @@ public class MachineGun : MonoBehaviour {
             mGunParticleSystem.Stop(true);
             mGunStartCounter = 0.0f;
             mFiringWeapon = false;
-            mGunBarrelRotator.speed = Mathf.Clamp(mGunBarrelRotator.speed - (1.0f * Time.deltaTime), 0.0f, 100.0f);
+            mGunBarrelRotator.mSpeed = Mathf.Clamp(mGunBarrelRotator.mSpeed - (1.0f * Time.deltaTime), 0.0f, 100.0f);
         }
 	}
 

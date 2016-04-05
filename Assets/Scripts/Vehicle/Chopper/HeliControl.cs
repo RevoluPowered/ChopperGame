@@ -18,6 +18,10 @@ public class HeliControl : MonoBehaviour {
 	void Start () {
         mRigidbody = GetComponent<Rigidbody>();
 	}
+
+    /// <summary>
+    /// Current throttle setting / percentage.
+    /// </summary>
     float mThrottle = 1.0f;
 
     /// <summary>

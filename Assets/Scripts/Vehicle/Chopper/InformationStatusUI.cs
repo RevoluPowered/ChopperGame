@@ -6,7 +6,8 @@ using UnityEngine.UI;
 /// Information Status UI
 /// Used to count 'score'.
 /// </summary>
-[RequireComponent(typeof(InformationStatusUI))]
+
+[RequireComponent(typeof(Text))]
 public class InformationStatusUI : MonoBehaviour {
 
     private static InformationStatusUI mInformationStatusInstance;
@@ -32,11 +33,11 @@ public class InformationStatusUI : MonoBehaviour {
     void Awake()
     {
         mInformationStatusInstance = this;
+        mText = GetComponent<Text>();
     }
 
 	// Use this for initialization
 	void Start () {
-        mText = GetComponent<Text>();
 	}
 
     /// <summary>
