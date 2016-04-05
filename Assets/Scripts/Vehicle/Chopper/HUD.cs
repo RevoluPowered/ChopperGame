@@ -34,14 +34,39 @@ public class HUD : MonoBehaviour {
     /// </summary>
     private Rigidbody mRigidbody;
 
+    /// <summary>
+    /// The altitude warning sound.
+    /// </summary>
+    public AudioSource mAlertSound;
+
+
 	// Update is called once per frame
 	void FixedUpdate () {
         // Check our altitude using a raycast this doesn't use sea level.
         RaycastHit ray;
+
+        // Altitude check based on ground height.
 	    if(Physics.Raycast(transform.position,Vector3.down, out ray, 10000.0f, ~layermask, QueryTriggerInteraction.Collide))
         {
-            // Output our altitude
-            mAltimeter.text = "Alt: " + ray.distance.ToString("0.0") + " m";
+            if (ray.distance < 230.0f)
+            {
+                // Output our altitude
+                mAltimeter.text = "Alt: " + ray.distance.ToString("0.0") + " m";
+                // Stop alert sound
+                if(mAlertSound.isPlaying)
+                {
+                    mAlertSound.Stop();
+                }
+            }
+            else
+            {
+                mAltimeter.text = "Alt: <color=red>" + ray.distance.ToString("0.0") + " m</color>";
+                // Sound alert player
+                if(!mAlertSound.isPlaying)
+                {
+                    mAlertSound.Play();
+                }
+            }
         }
 
         // Check our speed
@@ -50,6 +75,6 @@ public class HUD : MonoBehaviour {
         // Check our heading
         mHDG.text = "HDG: " + transform.rotation.eulerAngles.y.ToString("000") + " deg";
 
-
+        
     }
 }

@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 
 public class HeliControl : MonoBehaviour {
+    /// <summary>
+    /// Local rigidbody
+    /// </summary>
     Rigidbody mRigidbody;
 
     /// <summary>
@@ -44,12 +47,12 @@ public class HeliControl : MonoBehaviour {
     void Update () {
 
         // Pitch accumulator and axis handling from inputs.
-        float vert = Input.GetAxis("Mouse Y") * mControlMultiplier.x;
-        accumulatedPanningY += vert * Time.deltaTime;        
+        float vert = Input.GetAxis("Vertical") * mControlMultiplier.x;
+        accumulatedPanningY = vert; // * Time.deltaTime;        
 
         // Yaw accumulator and axis handling from inputs.
-        float yaw = -Input.GetAxis("Mouse X") * mControlMultiplier.y;
-        accumulatedPanningX += yaw * Time.deltaTime;
+        float yaw = Input.GetAxis("RollControl") * mControlMultiplier.y;
+        accumulatedPanningX = yaw; // * Time.deltaTime;
 
         // Roll handling
         float horiz = Input.GetAxis("Horizontal") * mControlMultiplier.z;
@@ -71,7 +74,7 @@ public class HeliControl : MonoBehaviour {
         // Add force relative to the orientation to emulate gravity offset, this should be relatively stable flight.
         mThrottleSlider.size = (throttle +1) * 0.5f ;
 
-        if(transform.position.y <= 24.0f)
+        /*if(transform.position.y <= 24.0f)
         {
             mRigidbody.constraints = RigidbodyConstraints.FreezePositionY;
             transform.position = transform.position + Vector3.up * Time.deltaTime;
@@ -79,7 +82,7 @@ public class HeliControl : MonoBehaviour {
         else
         {
             mRigidbody.constraints = RigidbodyConstraints.None;
-        }
+        }*/
     }
 
     /// <summary>
@@ -92,15 +95,15 @@ public class HeliControl : MonoBehaviour {
     /// </summary>
     void FixedUpdate()
     {
+        // Force
         mRigidbody.AddForce((transform.up * mThrottle) * mRigidbody.mass * Physics.gravity.magnitude);
         
-        // Stabilize velocity
+        /*// Stabilize velocity
         if( mRigidbody.velocity.magnitude > mMaxVelocity)
         {
-            mRigidbody.velocity = mRigidbody.velocity - (mRigidbody.velocity * Time.deltaTime);
-            Console.Log("Clamping velocity");
-            
-        }
+            mRigidbody.velocity = mRigidbody.velocity - mRigidbody.velocity * Time.deltaTime;
+            Console.Log("Clamping velocity");            
+        }*/
     }
     
 }

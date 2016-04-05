@@ -48,7 +48,7 @@ public class MissileLauncher : MonoBehaviour {
     void Start () {
         // Get local damage base.
         mDamageBase = GetComponent<DamageBase>();
-
+        
 	    if(mMissilePrefab == null)
         {
             Console.Log("[Launcher] Missile prefab not set, destroying launcher.");
@@ -56,6 +56,12 @@ public class MissileLauncher : MonoBehaviour {
 
             Destroy(this);
         }
+        else
+        {
+            // Register to our 'score' counter in the information status ui in the game.
+            InformationStatusUI.RegisterDamageBase(mDamageBase);
+        }
+        
 	}
 	
 	// Update is called once per frame
