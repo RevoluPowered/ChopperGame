@@ -566,7 +566,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 447906, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2487.5
+      value: 1945
       objectReference: {fileID: 0}
     - target: {fileID: 447906, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
       propertyPath: m_LocalPosition.y
@@ -676,6 +676,16 @@ Prefab:
       propertyPath: mGunBarrelRotator
       value: 
       objectReference: {fileID: 1132078331}
+    - target: {fileID: 8219386, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24386582, guid: 63344908e1a2651458dd84543b971daa,
+        type: 2}
+    - target: {fileID: 8259806, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24386582, guid: 63344908e1a2651458dd84543b971daa,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 11431690, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a6ac75ec467f62d4aac725f7b97814b9, type: 2}
