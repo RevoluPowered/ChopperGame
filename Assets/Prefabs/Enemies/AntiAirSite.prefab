@@ -732,7 +732,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168432}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 2943.86, y: 863.53, z: 4321.99}
+  m_LocalPosition: {x: 3787.7495, y: 629.4282, z: 3878.6304}
   m_LocalScale: {x: 4, y: 0.2, z: 2}
   m_Children:
   - {fileID: 428114}
@@ -2161,7 +2161,7 @@ MonoBehaviour:
   mMissilePrefab: {fileID: 108218, guid: c5f10877ea3e5364e9794fd53aed3ee7, type: 2}
   mSpawnNode: {fileID: 194692}
   mMissilesStored: 58
-  mTargetRadius: 250
+  mTargetRadius: 500
   mEnemyDetected: {fileID: 8218944}
   mMissilesLoaded: 0
   mChanceOfHitToOne: 3
