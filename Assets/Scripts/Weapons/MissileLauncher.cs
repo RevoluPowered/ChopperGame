@@ -119,6 +119,9 @@ public class MissileLauncher : MonoBehaviour {
             
 	}
 
+    /// <summary>
+    /// The tag which the launcher shoots at
+    /// </summary>
     public string mTargetTag = "Player";
 
    
@@ -134,8 +137,8 @@ public class MissileLauncher : MonoBehaviour {
         // Instantiate missile for firing sequence
         GameObject missile = Instantiate<GameObject>(mMissilePrefab);
         
-        // Spawn missile at the launcher location
-        missile.transform.position = transform.position;
+        // Spawn missile at the launcher node location
+        missile.transform.position = mSpawnNode.transform.position;
 
         // Retrieve the missile controller.
         Missile missilecontroller = missile.GetComponent<Missile>();
