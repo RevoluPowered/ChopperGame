@@ -27,8 +27,8 @@ public class CameraController : MonoBehaviour {
         float verticalAxis = Input.GetAxis("ViewVertical");
 
         // Debug the output of these controls.
-        Console.Log("Horizontal: " + horizontalAxis);
-        Console.Log("Verticald: " + verticalAxis);
+        //Console.Log("Horizontal: " + horizontalAxis);
+        //Console.Log("Verticald: " + verticalAxis);
 
         // Rotate around the horizontal camera axis. (node must be centered, camera must be off center from node for this to work)
         transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(0, horizontalAxis * horizontalRotationSpeed, 0),Time.deltaTime);
