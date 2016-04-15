@@ -58,21 +58,59 @@ public class InformationStatusUI : MonoBehaviour {
         mText.text = ui;
     }
 
+    bool queuedUpdate = false;
+
     /// <summary>
     /// Count the enemies in the game
     /// </summary>
     private void CountEnemies()
     {
-        // Count the enemies on the map
-        GameObject[] targets = GameObject.FindGameObjectsWithTag("target");
+        queuedUpdate = true;
+    }
 
-        // Store the new enemy count
-        mEnemyCount = targets.Length;
+    public void FixedUpdate()
+    {
+        if(queuedUpdate)
+        {
+            try
+            {
+                // Count the enemies on the map
+                GameObject[] targets = GameObject.FindGameObjectsWithTag("target");
 
-        // Display enemy count in console for debugging purposes.
-        Console.Log("Enemy count: " + mEnemyCount);
+                if (targets == null)
+                {
+                    Debug.Log("Null array detected!");
+                    mEnemyCount = 0; // Empty array, no enemies.
+                }
+                else
+                {
+                    foreach (GameObject enemy in targets)
+                    {
+                        if (enemy == null || enemy.name == null)
+                        {
+                            Debug.Log("Null game object");
+                        }
+                        else
+                        {
+                            Debug.Log("Name: " + enemy.name);
+                        }
+                    }
+                    // Store the new enemy count
+                    mEnemyCount = targets.Length;
+                }
+            }
+            catch (System.Exception e)
+            {
+                Console.LogError("Failed to count enemies!");
+            }
+            // Display enemy count in console for debugging purposes.
+            Console.Log("Enemy count: " + mEnemyCount);
 
-        UpdateUI();
+            // Update user interface
+            UpdateUI();
+        }
+        queuedUpdate = false;
+
     }
 
     /// <summary>
@@ -84,6 +122,8 @@ public class InformationStatusUI : MonoBehaviour {
     /// <param name="source"></param>
     private void DamageBase_Death(DamageBase damageBase, float damageAmount, float overDamage, GameObject source)
     {
+        // Bugfix for object not dying as unity has not removed it yet.
+        damageBase.gameObject.tag = "dead";
         // Force re-count;
         CountEnemies();
     }
