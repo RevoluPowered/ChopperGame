@@ -1,0 +1,204 @@
+fileFormatVersion: 2
+guid: 968a96d6979ca3442bdedf542010d308
+timeCreated: 1487508929
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ChopperBlade_ARM_L
+    100002: ChopperBlade_ARM_R
+    100004: ChopperBlade_L
+    100006: ChopperBlade_R
+    100008: ChopperPropCenter
+    100010: Cube_001
+    100012: Cube_002
+    100014: Cylinder
+    100016: Cylinder_001
+    100018: Cylinder_002
+    100020: Cylinder_003
+    100022: Cylinder_004
+    100024: Cylinder_005
+    100026: Engine_Vent
+    100028: Engine_Vent_001
+    100030: Engine_Vent_004
+    100032: Engine_Vent_005
+    100034: Helicopter_Body
+    100036: //RootNode
+    100038: LandingGear
+    100040: LandingGear_001
+    100042: LandingGear_002
+    100044: LandingGear_Door
+    100046: LandingGear_Door_001
+    100048: LandingGear_Door_002
+    100050: Prop_Rotation
+    400000: ChopperBlade_ARM_L
+    400002: ChopperBlade_ARM_R
+    400004: ChopperBlade_L
+    400006: ChopperBlade_R
+    400008: ChopperPropCenter
+    400010: Cube_001
+    400012: Cube_002
+    400014: Cylinder
+    400016: Cylinder_001
+    400018: Cylinder_002
+    400020: Cylinder_003
+    400022: Cylinder_004
+    400024: Cylinder_005
+    400026: Engine_Vent
+    400028: Engine_Vent_001
+    400030: Engine_Vent_004
+    400032: Engine_Vent_005
+    400034: Helicopter_Body
+    400036: //RootNode
+    400038: LandingGear
+    400040: LandingGear_001
+    400042: LandingGear_002
+    400044: LandingGear_Door
+    400046: LandingGear_Door_001
+    400048: LandingGear_Door_002
+    400050: Prop_Rotation
+    2300000: ChopperBlade_ARM_L
+    2300002: ChopperBlade_ARM_R
+    2300004: ChopperBlade_L
+    2300006: ChopperBlade_R
+    2300008: ChopperPropCenter
+    2300010: Cube_001
+    2300012: Cube_002
+    2300014: Cylinder
+    2300016: Cylinder_001
+    2300018: Cylinder_002
+    2300020: Cylinder_003
+    2300022: Cylinder_004
+    2300024: Cylinder_005
+    2300026: Engine_Vent
+    2300028: Engine_Vent_001
+    2300030: Engine_Vent_004
+    2300032: Engine_Vent_005
+    2300034: Helicopter_Body
+    2300036: LandingGear
+    2300038: LandingGear_001
+    2300040: LandingGear_002
+    2300042: LandingGear_Door
+    2300044: LandingGear_Door_001
+    2300046: LandingGear_Door_002
+    2300048: Prop_Rotation
+    3300000: ChopperBlade_ARM_L
+    3300002: ChopperBlade_ARM_R
+    3300004: ChopperBlade_L
+    3300006: ChopperBlade_R
+    3300008: ChopperPropCenter
+    3300010: Cube_001
+    3300012: Cube_002
+    3300014: Cylinder
+    3300016: Cylinder_001
+    3300018: Cylinder_002
+    3300020: Cylinder_003
+    3300022: Cylinder_004
+    3300024: Cylinder_005
+    3300026: Engine_Vent
+    3300028: Engine_Vent_001
+    3300030: Engine_Vent_004
+    3300032: Engine_Vent_005
+    3300034: Helicopter_Body
+    3300036: LandingGear
+    3300038: LandingGear_001
+    3300040: LandingGear_002
+    3300042: LandingGear_Door
+    3300044: LandingGear_Door_001
+    3300046: LandingGear_Door_002
+    3300048: Prop_Rotation
+    4300000: ChopperPropCenter
+    4300002: ChopperBlade_ARM_L
+    4300004: ChopperBlade_L
+    4300006: ChopperBlade_ARM_R
+    4300008: ChopperBlade_R
+    4300010: Cylinder_003
+    4300012: Cube_002
+    4300014: Cylinder_002
+    4300016: Cube_001
+    4300018: Helicopter_Body
+    4300020: Engine_Vent
+    4300022: Prop_Rotation
+    4300024: LandingGear_Door_002
+    4300026: LandingGear
+    4300028: LandingGear_Door_001
+    4300030: LandingGear_002
+    4300032: LandingGear_Door
+    4300034: LandingGear_001
+    4300036: Engine_Vent_004
+    4300038: Engine_Vent_005
+    4300040: Engine_Vent_001
+    4300042: Cylinder
+    4300044: Cylinder_001
+    4300046: Cylinder_004
+    4300048: Cylinder_005
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
